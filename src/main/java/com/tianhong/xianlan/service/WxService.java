@@ -1,8 +1,11 @@
 package com.tianhong.xianlan.service;
 
+import com.tianhong.xianlan.enums.ThFunctionEnum;
 import com.tianhong.xianlan.mapper.ThDiangongMapper;
+import com.tianhong.xianlan.mapper.ThFunctionMapper;
 import com.tianhong.xianlan.mapper.ThPQrcodeMapper;
 import com.tianhong.xianlan.pojo.ThDiangong;
+import com.tianhong.xianlan.pojo.ThFunction;
 import com.tianhong.xianlan.pojo.ThPQrcode;
 import com.tianhong.xianlan.utils.XMLUtils;
 import com.tianhong.xianlan.utils.wxUtil.WXRefuntResult;
@@ -44,6 +47,8 @@ public class WxService {
     private ThDiangongMapper thDiangongMapper;
     @Autowired
     private ThPQrcodeMapper thPQrcodeMapper;
+    @Autowired
+    private ThFunctionMapper thFunctionMapper;
 
     public MsgVo getOpeanid(String code, HttpSession session) {
 //        httpClientService.clientGet();
@@ -53,6 +58,12 @@ public class WxService {
     public ModelAndView qyfk(String openid, Integer id, Integer randnum) throws Exception {
         if (openid==null||id==null||randnum==null){
             return  fail("领取失败，请重试");
+        }
+
+        //判断此功能是否开启
+        ThFunction thFunction=thFunctionMapper.queryByNum(ThFunctionEnum.FUNCTION_1001.getCode());
+        if (null==thFunction||thFunction.getStata().equals(0)){
+            return  fail("领取失败，此功能暂未开放");
         }
 
         //1.查询此openid是否存在

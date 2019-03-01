@@ -30,7 +30,7 @@
                              type="XMLMAPPER"/>
 
 
-        <table tableName="%"></table>
+        <table tableName="th_function"></table>
         <!-- %号代表所有的表，可以根据实际需求改为自己要生成的表的名字 -->
 
     </context>
