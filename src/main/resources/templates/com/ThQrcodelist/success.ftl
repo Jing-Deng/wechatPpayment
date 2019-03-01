@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-	<title>Document</title>
+	<title>提现成功</title>
 	<!-- 	<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.4.3/weui.min.css"> -->
     <link rel="stylesheet" href="/thxl/css/weuix.css">
     <link rel="stylesheet" href="/thxl/css/weui.css">
