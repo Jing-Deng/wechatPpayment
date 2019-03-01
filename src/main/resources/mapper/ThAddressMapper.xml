@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tianhong.xianlan.mapper.ThAddressMapper" >
+  <resultMap id="BaseResultMap" type="com.tianhong.xianlan.pojo.ThAddress" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="opid" property="opid" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="telephone" property="telephone" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="address_details" property="addressDetails" jdbcType="VARCHAR" />
+    <result column="youzheng" property="youzheng" jdbcType="VARCHAR" />
+    <result column="states" property="states" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

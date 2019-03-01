@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tianhong.xianlan.mapper.ThJifenhuoquMapper" >
+  <resultMap id="BaseResultMap" type="com.tianhong.xianlan.pojo.ThJifenhuoqu" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="jifen_sq" property="jifenSq" jdbcType="INTEGER" />
+    <result column="jifen_rz" property="jifenRz" jdbcType="INTEGER" />
+    <result column="jifen_sm" property="jifenSm" jdbcType="INTEGER" />
+    <result column="jifen_dgz" property="jifenDgz" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

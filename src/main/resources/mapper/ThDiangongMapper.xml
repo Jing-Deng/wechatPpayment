@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tianhong.xianlan.mapper.ThDiangongMapper" >
+  <resultMap id="BaseResultMap" type="com.tianhong.xianlan.pojo.ThDiangong" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="dg_name" property="dgName" jdbcType="VARCHAR" />
+    <result column="wxid" property="wxid" jdbcType="VARCHAR" />
+    <result column="dg_tel" property="dgTel" jdbcType="VARCHAR" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="work_year" property="workYear" jdbcType="VARCHAR" />
+    <result column="zj_num" property="zjNum" jdbcType="VARCHAR" />
+    <result column="zj_picz" property="zjPicz" jdbcType="VARCHAR" />
+    <result column="zj_picf" property="zjPicf" jdbcType="VARCHAR" />
+    <result column="dg_jifen" property="dgJifen" jdbcType="INTEGER" />
+    <result column="dg_score" property="dgScore" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="headimgurl" property="headimgurl" jdbcType="VARCHAR" />
+    <result column="dg_sfzz" property="dgSfzz" jdbcType="VARCHAR" />
+    <result column="dg_sfzf" property="dgSfzf" jdbcType="VARCHAR" />
+    <result column="dg_sfzh" property="dgSfzh" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+  </resultMap>
+  <select id="queryByOpenId" resultMap="BaseResultMap">
+    select *
+    from th_diangong
+    where  wxid=#{openid}
+  </select>
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tianhong.xianlan.mapper.ThQiandaoMapper" >
+  <resultMap id="BaseResultMap" type="com.tianhong.xianlan.pojo.ThQiandao" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="qd_normal" property="qdNormal" jdbcType="INTEGER" />
+    <result column="qd_day" property="qdDay" jdbcType="INTEGER" />
+    <result column="qd_guize" property="qdGuize" jdbcType="VARCHAR" />
+    <result column="jf_guize" property="jfGuize" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

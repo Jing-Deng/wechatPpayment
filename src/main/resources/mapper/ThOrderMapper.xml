@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tianhong.xianlan.mapper.ThOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.tianhong.xianlan.pojo.ThOrder" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="opid" property="opid" jdbcType="VARCHAR" />
+    <result column="u_name" property="uName" jdbcType="VARCHAR" />
+    <result column="u_telephone" property="uTelephone" jdbcType="VARCHAR" />
+    <result column="u_address" property="uAddress" jdbcType="VARCHAR" />
+    <result column="u_address_details" property="uAddressDetails" jdbcType="VARCHAR" />
+    <result column="u_youzheng" property="uYouzheng" jdbcType="VARCHAR" />
+    <result column="o_number" property="oNumber" jdbcType="VARCHAR" />
+    <result column="g_name" property="gName" jdbcType="VARCHAR" />
+    <result column="g_price" property="gPrice" jdbcType="VARCHAR" />
+    <result column="g_picture" property="gPicture" jdbcType="VARCHAR" />
+    <result column="g_desc" property="gDesc" jdbcType="VARCHAR" />
+    <result column="g_stock" property="gStock" jdbcType="INTEGER" />
+    <result column="buy_money" property="buyMoney" jdbcType="VARCHAR" />
+    <result column="buy_number" property="buyNumber" jdbcType="VARCHAR" />
+    <result column="yunfei" property="yunfei" jdbcType="VARCHAR" />
+    <result column="order_time" property="orderTime" jdbcType="TIMESTAMP" />
+    <result column="finish_time" property="finishTime" jdbcType="TIMESTAMP" />
+    <result column="service_phone" property="servicePhone" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="INTEGER" />
+    <result column="fahuo_time" property="fahuoTime" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

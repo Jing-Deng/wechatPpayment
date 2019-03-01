@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--配置插件位置 MyMapper-->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.tianhong.xianlan.utils.MyMapper"/> <!-- 这里指向第三点创建的MyMapper -->
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://193.112.242.190:3306/thdata"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <!-- 对于生成的pojo所在包 自己先创建-->
+        <javaModelGenerator targetPackage="com.tianhong.xianlan.pojo" targetProject="src/main/java"/>
+
+        <!-- 对于生成的mapper所在目录  自己先创建-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <!-- 配置mapper对应的java映射 自己先创建-->
+        <javaClientGenerator targetPackage="com.tianhong.xianlan.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+
+        <table tableName="%"></table>
+        <!-- %号代表所有的表，可以根据实际需求改为自己要生成的表的名字 -->
+
+    </context>
+</generatorConfiguration>
