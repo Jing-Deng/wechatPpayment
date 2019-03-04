@@ -158,7 +158,7 @@ public class WxService {
         map.put("money",thPQrcode.getJifenAdd()/10.0);
         if ("SUCCESS".equals(fundResult.getReturn_code())&&"SUCCESS".equals(fundResult.getResult_code())){
             thPQrcode.setStatus(1);
-            thPQrcode.setCreatetime(String.valueOf(new Date().getTime()));
+            thPQrcode.setScanTime(String.valueOf(new Date().getTime()));
             thPQrcode.setScanDiangong(thDiangong.getDgName());
             thPQrcode.setCate(1);
             thPQrcodeMapper.updateByPrimaryKey(thPQrcode);
