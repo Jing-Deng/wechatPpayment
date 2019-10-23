@@ -14,4 +14,24 @@
     <result column="scan_time" property="scanTime" jdbcType="VARCHAR" />
     <result column="scan_diangong" property="scanDiangong" jdbcType="VARCHAR" />
   </resultMap>
+
+  <select id="getMapData" resultType="java.util.HashMap">
+    select d.id 'userid',p.jifen_add/10 'money',p.scan_diangong 'username',
+		FROM_UNIXTIME((p.scan_time/1000),'%Y-%m-%d %H:%i:%s') as 'time',
+		d.dg_tel 'phone',d.address 'address',d.work_year 'workyear',p.id 'moneyid'
+    from th_p_qrcode  p
+    inner join th_diangong d
+    on d.dg_name=p.scan_diangong
+    where p.cate =1
+    and p.scan_time is not null
+    <if test="starttime!=null and starttime!=''">
+      and #{starttime}&lt;=p.scan_time
+    </if>
+    <if test="endtime!=null and endtime!=''">
+      and #{endtime} &gt;= p.scan_time
+    </if>
+    group by p.id
+    order by p.scan_time desc
+  </select>
+
 </mapper>

@@ -9,7 +9,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @MapperScan("com.tianhong.xianlan.mapper")//将项目中对应的mapper类的路径加进来就可以了@MapperScan("com.winter.mapper")这个注解非常的关键，这个对应了项目中mapper（dao）所对应的包路径，
-@ComponentScan(basePackages ={"com.tianhong.xianlan.service", "com.tianhong.xianlan.controller"})
+@ComponentScan(basePackages ={"com.tianhong.xianlan.service", "com.tianhong.xianlan.controller","com.tianhong.xianlan.configuration"})
 public class XianlanApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

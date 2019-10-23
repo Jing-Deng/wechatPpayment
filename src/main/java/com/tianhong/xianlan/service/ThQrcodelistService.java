@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -45,4 +46,7 @@ public class ThQrcodelistService {
     map.put("url","www.baidu.com");
     return  new ModelAndView("com/ThQrcodelist/list",map);
     }
+
+
+
 }
